@@ -1,657 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-cursor="true">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Er. Arun Panthi - Professional Civil Engineer Portfolio. Graduate from Mid-West University with experience in hotel construction and road engineering.">
-    <meta name="keywords" content="Civil Engineer, Arun Panthi, Nepal, Construction, Road Division Surkhet, Mid-West University">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Er. Arun Panthi - Professional Civil Engineer from Mid-West University. Expert in structural design, construction management, and infrastructure.">
+    <meta name="keywords" content="Civil Engineer, Arun Panthi, Nepal, Construction, Road Division Surkhet, Mid-West University, Structural Engineer, Site Engineer">
     <meta name="author" content="Er. Arun Panthi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="color-scheme" content="dark light">
+    <meta property="og:title" content="Er. Arun Panthi | Civil Engineer">
+    <meta property="og:description" content="Professional Civil Engineer — Structural Design & Construction Management">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Er. Arun Panthi | Civil Engineer">
+
     <title>Er. Arun Panthi | Civil Engineer Portfolio</title>
 
-    <!-- Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='50' font-weight='bold' text-anchor='middle' fill='white'%3EAP%3C/text%3E%3C/svg%3E">
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- AOS Animation Library -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ===================== PRELOADER ===================== -->
+    <!-- ====== PRELOADER ====== -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
-            <div class="preloader-logo">AP</div>
-            <div class="preloader-bar">
-                <div class="preloader-progress"></div>
+            <div class="preloader-logo">
+                <svg viewBox="0 0 120 120" class="preloader-ring">
+                    <circle cx="60" cy="60" r="54" class="ring-bg"/>
+                    <circle cx="60" cy="60" r="54" class="ring-fill"/>
+                </svg>
+                <div class="preloader-initials">AP</div>
             </div>
-            <p>Loading Portfolio...</p>
+            <div class="preloader-name">
+                <span>E</span><span>r</span><span>.</span><span>&nbsp;</span>
+                <span>A</span><span>r</span><span>u</span><span>n</span><span>&nbsp;</span>
+                <span>P</span><span>a</span><span>n</span><span>t</span><span>h</span><span>i</span>
+            </div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+            <div class="preloader-percent" id="preloaderPercent">0%</div>
+            <p class="preloader-status">Building Portfolio<span class="dots"></span></p>
         </div>
     </div>
 
-    <!-- ===================== CURSOR ===================== -->
-    <div class="custom-cursor" id="cursor"></div>
-    <div class="custom-cursor-follower" id="cursorFollower"></div>
+    <!-- ====== CURSORS ====== -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- ===================== NAVBAR ===================== -->
+    <!-- ====== SIDE SOCIAL BAR ====== -->
+    <div class="side-social">
+        <a href="https://www.facebook.com/arunpanthi" target="_blank" rel="noopener" data-tip="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/arunpanthi" target="_blank" rel="noopener" data-tip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:Er.arunpanthi@gmail.com" data-tip="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="wa-side-link" data-tip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <div class="side-social-line"></div>
+    </div>
+
+    <!-- ====== SIDE EMAIL BAR ====== -->
+    <div class="side-email">
+        <a href="mailto:Er.arunpanthi@gmail.com">Er.arunpanthi@gmail.com</a>
+        <div class="side-email-line"></div>
+    </div>
+
+    <!-- ====== THEME & SETTINGS PANEL ====== -->
+    <div class="settings-panel" id="settingsPanel">
+        <button class="settings-toggle" id="settingsToggle" aria-label="Settings">
+            <i class="fas fa-cog"></i>
+        </button>
+        <div class="settings-menu" id="settingsMenu">
+            <h4>Settings</h4>
+            <div class="setting-item">
+                <span>Theme</span>
+                <div class="theme-switch">
+                    <button class="theme-btn active" data-theme="dark"><i class="fas fa-moon"></i></button>
+                    <button class="theme-btn" data-theme="light"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+            <div class="setting-item">
+                <span>Cursor</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="cursorToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>Animations</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="animToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>Sound</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="soundToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#home" class="nav__logo">
-                <div class="logo-icon">AP</div>
+            <a href="#home" class="nav-logo" aria-label="Home">
+                <div class="logo-icon"><span>AP</span></div>
                 <div class="logo-text">
                     <span class="logo-name">Arun Panthi</span>
-                    <span class="logo-title">Civil Engineer</span>
+                    <span class="logo-role">Civil Engineer</span>
                 </div>
             </a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="fas fa-home"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="fas fa-user"></i>
-                            <span>About</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#education" class="nav__link">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Education</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Experience</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="fas fa-cogs"></i>
-                            <span>Skills</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#projects" class="nav__link">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="fas fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-text="Home"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link" data-text="About"><i class="fas fa-user"></i><span>About</span></a></li>
+                    <li><a href="#resume" class="nav-link" data-text="Resume"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+                    <li><a href="#skills" class="nav-link" data-text="Skills"><i class="fas fa-cogs"></i><span>Skills</span></a></li>
+                    <li><a href="#projects" class="nav-link" data-text="Projects"><i class="fas fa-briefcase"></i><span>Projects</span></a></li>
+                    <li><a href="#gallery" class="nav-link" data-text="Gallery"><i class="fas fa-images"></i><span>Gallery</span></a></li>
+                    <li><a href="#contact" class="nav-link" data-text="Contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
                 </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="fas fa-times"></i>
-                </div>
+                <button class="nav-close" id="navClose"><i class="fas fa-times"></i></button>
             </div>
 
-            <div class="nav__actions">
-                <a href="#contact" class="nav__cta">Hire Me</a>
-                <div class="nav__toggle" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <div class="nav-right">
+                <a href="#contact" class="nav-cta"><i class="fas fa-paper-plane"></i><span>Hire Me</span></a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
         </nav>
+        <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollBar"></div></div>
     </header>
 
-    <!-- ===================== HERO SECTION ===================== -->
+    <!-- ====== HERO ====== -->
     <section class="hero" id="home">
-        <!-- Animated Background -->
-        <div class="hero__bg">
-            <div class="hero__shape shape-1"></div>
-            <div class="hero__shape shape-2"></div>
-            <div class="hero__shape shape-3"></div>
-            <div class="hero__grid-bg"></div>
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-grid-bg"></div>
+        <div class="hero-gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
         </div>
 
-        <div class="hero__container container">
-            <div class="hero__content" data-aos="fade-right" data-aos-duration="1000">
-                <div class="hero__badge">
-                    <span class="badge-dot"></span>
-                    Available for Opportunities
+        <div class="hero-container container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    <span>Open for Opportunities</span>
                 </div>
 
-                <h1 class="hero__title">
-                    <span class="hero__greeting">Namaste! I'm</span>
-                    <span class="hero__name">Er. Arun<br>Panthi</span>
+                <h1 class="hero-title">
+                    <span class="hero-greeting" id="greeting">Good Morning,</span>
+                    <span class="hero-intro">I'm</span>
+                    <span class="hero-name-wrap">
+                        <span class="hero-name" data-text="Er. Arun Panthi">Er. Arun Panthi</span>
+                    </span>
                 </h1>
 
-                <div class="hero__typewriter">
-                    <span class="typewriter-prefix">A Professional</span>
-                    <span class="typewriter-text" id="typewriter"></span>
-                    <span class="typewriter-cursor"></span>
+                <div class="hero-typed-row">
+                    <span class="typed-label">A Professional</span>
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="typed-cursor"></span>
                 </div>
 
-                <p class="hero__description">
-                    Passionate Civil Engineer specializing in structural design and 
-                    construction management. Building Nepal's future through innovative 
-                    and sustainable engineering solutions.
+                <p class="hero-desc">
+                    Passionate Civil Engineer dedicated to structural excellence, 
+                    construction innovation, and building Nepal's future — one 
+                    structure at a time. 🏗️
                 </p>
 
-                <div class="hero__stats-row">
-                    <div class="hero__stat">
-                        <span class="stat-num">B.E.</span>
-                        <span class="stat-text">Civil Engineering</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="hero__stat">
-                        <span class="stat-num">1+</span>
-                        <span class="stat-text">Years Experience</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="hero__stat">
-                        <span class="stat-num">2+</span>
-                        <span class="stat-text">Projects Done</span>
-                    </div>
+                <div class="hero-metrics">
+                    <div class="metric"><span class="metric-val">B.E.</span><span class="metric-label">Civil Engg</span></div>
+                    <div class="metric-sep"></div>
+                    <div class="metric"><span class="metric-val">1+</span><span class="metric-label">Years Exp</span></div>
+                    <div class="metric-sep"></div>
+                    <div class="metric"><span class="metric-val">2+</span><span class="metric-label">Projects</span></div>
                 </div>
 
-                <div class="hero__actions">
-                    <a href="#contact" class="btn btn--primary">
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary glow-btn">
                         <span>Get In Touch</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="images/resume.pdf" class="btn btn--secondary" download>
+                    <a href="images/resume.pdf" class="btn btn-glass" download>
                         <i class="fas fa-download"></i>
                         <span>Download CV</span>
                     </a>
+                    <a href="#" class="btn btn-whatsapp wa-hero-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
                 </div>
 
-                <div class="hero__socials">
-                    <span class="social-label">Follow Me</span>
-                    <div class="social-line"></div>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/arunpanthi" target="_blank" class="social-link" data-tooltip="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.facebook.com/arunpanthi" target="_blank" class="social-link" data-tooltip="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="mailto:arunpanthi@email.com" class="social-link" data-tooltip="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://wa.me/977XXXXXXXXXX" target="_blank" class="social-link" data-tooltip="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                <div class="hero-trust">
+                    <div class="trust-avatars">
+                        <div class="trust-avatar">👷</div>
+                        <div class="trust-avatar">🏗️</div>
+                        <div class="trust-avatar">📐</div>
                     </div>
+                    <span>Trusted by multiple clients & organizations</span>
                 </div>
             </div>
 
-            <div class="hero__image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <div class="hero__image-wrapper">
-                    <!-- REPLACE src WITH YOUR ACTUAL PHOTO PATH -->
-                    <div class="hero__photo-frame">
-                        <img 
-                            src="https://arunpanthi.com.np/Photos/Er.Arunpanthi.jpg" 
-                            alt="Er. Arun Panthi - Civil Engineer" 
-                            class="hero__photo"
-                            onerror="this.style.display='none'; this.parentElement.querySelector('.photo-fallback').style.display='flex';"
-                        >
-                        <div class="photo-fallback" style="display:none;">
-                            <i class="fas fa-hard-hat"></i>
-                            <span>AP</span>
-                        </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="hero-img-box">
+                    <div class="hero-photo-frame">
+                        <img src="images/profile.jpg" alt="Er. Arun Panthi" class="hero-photo"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="hero-fallback"><i class="fas fa-hard-hat"></i><span>AP</span></div>
                     </div>
 
-                    <!-- Decorative Elements -->
-                    <div class="hero__decoration dec-1">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
-                    <div class="hero__decoration dec-2">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="hero__decoration dec-3">
-                        <i class="fas fa-road"></i>
-                    </div>
-                    <div class="hero__ring ring-1"></div>
-                    <div class="hero__ring ring-2"></div>
+                    <!-- Orbiting Icons -->
+                    <div class="orbit-ring ring-1"><div class="orbit-icon"><i class="fas fa-drafting-compass"></i></div></div>
+                    <div class="orbit-ring ring-2"><div class="orbit-icon"><i class="fas fa-building"></i></div></div>
+                    <div class="orbit-ring ring-3"><div class="orbit-icon"><i class="fas fa-road"></i></div></div>
+                    <div class="orbit-ring ring-4"><div class="orbit-icon"><i class="fas fa-helmet-safety"></i></div></div>
 
-                    <!-- Info Cards -->
-                    <div class="hero__info-card card-top">
-                        <div class="info-card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="info-card-text">
-                            <strong>Mid-West University</strong>
-                            <span>B.E. Civil Engineering</span>
-                        </div>
-                    </div>
+                    <!-- Glow -->
+                    <div class="hero-glow"></div>
 
-                    <div class="hero__info-card card-bottom">
-                        <div class="info-card-icon orange">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <div class="info-card-text">
-                            <strong>Licensed Engineer</strong>
-                            <span>NEC Registered</span>
-                        </div>
+                    <!-- Float Cards -->
+                    <div class="float-card fc-1">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div><strong>Mid-West University</strong><span>B.E. Civil</span></div>
                     </div>
+                    <div class="float-card fc-2">
+                        <i class="fas fa-certificate"></i>
+                        <div><strong>NEC Registered</strong><span>Licensed Engineer</span></div>
+                    </div>
+                    <div class="float-card fc-3">
+                        <i class="fas fa-star"></i>
+                        <div><strong>Quality Focused</strong><span>Excellence Driven</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-tech-row">
+                    <div class="tech-chip" data-tip="AutoCAD"><i class="fas fa-drafting-compass"></i></div>
+                    <div class="tech-chip" data-tip="SAP2000"><i class="fas fa-calculator"></i></div>
+                    <div class="tech-chip" data-tip="SketchUp"><i class="fas fa-cube"></i></div>
+                    <div class="tech-chip" data-tip="Excel"><i class="fas fa-file-excel"></i></div>
+                    <div class="tech-chip" data-tip="ETABS"><i class="fas fa-chart-bar"></i></div>
                 </div>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="hero__scroll">
-            <a href="#about" class="scroll-link">
-                <div class="scroll-mouse">
-                    <div class="scroll-wheel"></div>
-                </div>
-                <span>Scroll to explore</span>
-            </a>
-        </div>
+        <a href="#about" class="hero-scroll" aria-label="Scroll">
+            <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+            <span>Scroll</span>
+        </a>
     </section>
 
-    <!-- ===================== ABOUT SECTION ===================== -->
+    <!-- ====== MARQUEE ====== -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>⭐ Structural Design</span><span>🏗️ Construction Management</span>
+                <span>📐 AutoCAD Expert</span><span>🛤️ Road Engineering</span>
+                <span>📊 Quantity Estimation</span><span>🔍 Quality Control</span>
+                <span>📏 Surveying</span><span>🏨 Hotel Construction</span>
+                <span>⭐ Structural Design</span><span>🏗️ Construction Management</span>
+                <span>📐 AutoCAD Expert</span><span>🛤️ Road Engineering</span>
+                <span>📊 Quantity Estimation</span><span>🔍 Quality Control</span>
+                <span>📏 Surveying</span><span>🏨 Hotel Construction</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== ABOUT ====== -->
     <section class="section about" id="about">
         <div class="container">
-            <div class="section__header" data-aos="fade-up">
-                <span class="section__subtitle">
-                    <i class="fas fa-minus"></i> Introduction
-                </span>
-                <h2 class="section__title">About Me</h2>
-                <p class="section__desc">Get to know the person behind the hard hat</p>
+            <div class="section-head" data-aos="fade-up">
+                <div class="section-badge">About Me</div>
+                <h2 class="section-title">Discover My <span class="gtext">Story</span></h2>
+                <p class="section-sub">Passionate engineer committed to building excellence</p>
             </div>
 
-            <div class="about__grid">
-                <div class="about__image-col" data-aos="fade-right" data-aos-duration="800">
-                    <div class="about__image-wrapper">
-                        <!-- REPLACE src WITH YOUR ABOUT PHOTO -->
-                        <img 
-                            src="https://arunpanthi.com.np/Photos/Er.Arunpanthi.jpg" 
-                            alt="Er. Arun Panthi at work" 
-                            class="about__photo"
-                            onerror="this.style.display='none'; this.parentElement.querySelector('.about-fallback').style.display='flex';"
-                        >
-                        <div class="about-fallback" style="display:none;">
-                            <i class="fas fa-user-tie"></i>
+            <div class="about-grid">
+                <div class="about-img-side" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-img-wrap">
+                        <img src="images/about.jpg" alt="Er. Arun Panthi" class="about-photo"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="about-fallback"><i class="fas fa-user-tie"></i></div>
+                        <div class="about-exp-badge">
+                            <span class="exp-num">1<sup>+</sup></span>
+                            <span class="exp-label">Years<br>Experience</span>
                         </div>
-
-                        <div class="about__exp-badge">
-                            <div class="exp-badge-inner">
-                                <span class="exp-number">1<sup>+</sup></span>
-                                <span class="exp-text">Years of<br>Experience</span>
-                            </div>
-                        </div>
-
-                        <div class="about__pattern"></div>
+                        <div class="about-dots"></div>
                     </div>
                 </div>
 
-                <div class="about__content-col" data-aos="fade-left" data-aos-duration="800">
-                    <div class="about__info-cards">
-                        <div class="about__info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="info-details">
-                                <h4>Experience</h4>
-                                <p>Construction & Internship</p>
-                            </div>
-                        </div>
-                        <div class="about__info-card">
-                            <div class="info-icon orange">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div class="info-details">
-                                <h4>Projects</h4>
-                                <p>Hotel & Road Works</p>
-                            </div>
-                        </div>
-                        <div class="about__info-card">
-                            <div class="info-icon green">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="info-details">
-                                <h4>Education</h4>
-                                <p>B.E. Civil - MWU</p>
-                            </div>
-                        </div>
+                <div class="about-info-side" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="about-mini-cards">
+                        <div class="mcard"><div class="mcard-icon"><i class="fas fa-trophy"></i></div><h4>Experience</h4><p>Construction & Internship</p></div>
+                        <div class="mcard"><div class="mcard-icon o"><i class="fas fa-building"></i></div><h4>Projects</h4><p>Hotel & Road Works</p></div>
+                        <div class="mcard"><div class="mcard-icon g"><i class="fas fa-university"></i></div><h4>Education</h4><p>B.E. Civil — MWU</p></div>
                     </div>
 
-                    <div class="about__text">
-                        <p class="about__lead">
-                            I am <span class="highlight">Er. Arun Panthi</span>, a motivated and 
-                            detail-oriented Civil Engineer committed to delivering excellence in 
-                            every project I undertake.
-                        </p>
-                        <p>
-                            With a Bachelor's degree in Civil Engineering from 
-                            <strong>Mid-West University</strong>, I have developed a strong foundation 
-                            in structural analysis, geotechnical engineering, construction management, 
-                            and transportation engineering.
-                        </p>
-                        <p>
-                            My professional journey includes working on a <strong>hotel construction project</strong>, 
-                            where I supervised structural works, managed quality control, and coordinated 
-                            with multidisciplinary teams. I also completed a rewarding 
-                            <strong>4-month internship at the Road Division Surkhet</strong>, gaining 
-                            invaluable experience in government road construction projects, surveying, 
-                            and infrastructure development.
-                        </p>
+                    <div class="about-text">
+                        <p class="lead">I am <span class="hl">Er. Arun Panthi</span>, a dedicated Civil Engineer building Nepal's future through quality engineering.</p>
+                        <p>Graduated from <strong>Mid-West University</strong> with B.E. in Civil Engineering. Experienced in <strong>hotel construction</strong> supervision and <strong>4-month internship at Road Division Surkhet</strong>.</p>
                     </div>
 
-                    <div class="about__details">
-                        <div class="detail-item">
-                            <span class="detail-label">Full Name:</span>
-                            <span class="detail-value">Er. Arun Panthi</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Degree:</span>
-                            <span class="detail-value">B.E. Civil Engineering</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">University:</span>
-                            <span class="detail-value">Mid-West University</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Location:</span>
-                            <span class="detail-value">Nepal</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Languages:</span>
-                            <span class="detail-value">Nepali, English, Hindi</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Availability:</span>
-                            <span class="detail-value available">Open to Opportunities</span>
-                        </div>
+                    <div class="about-details">
+                        <div class="detail"><i class="fas fa-user"></i><span>Name:</span><strong>Er. Arun Panthi</strong></div>
+                        <div class="detail"><i class="fas fa-graduation-cap"></i><span>Degree:</span><strong>B.E. Civil Engineering</strong></div>
+                        <div class="detail"><i class="fas fa-university"></i><span>University:</span><strong>Mid-West University</strong></div>
+                        <div class="detail"><i class="fas fa-envelope"></i><span>Email:</span><strong>Er.arunpanthi@gmail.com</strong></div>
+                        <div class="detail"><i class="fas fa-map-marker-alt"></i><span>Location:</span><strong>Surkhet, Nepal</strong></div>
+                        <div class="detail"><i class="fas fa-language"></i><span>Languages:</span><strong>Nepali, English, Hindi</strong></div>
                     </div>
 
-                    <div class="about__actions">
-                        <a href="#contact" class="btn btn--primary">
-                            <span>Contact Me</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="images/resume.pdf" class="btn btn--outline" download>
-                            <i class="fas fa-file-pdf"></i>
-                            <span>Download CV</span>
-                        </a>
+                    <div class="about-btns">
+                        <a href="#contact" class="btn btn-primary"><span>Contact Me</span><i class="fas fa-arrow-right"></i></a>
+                        <a href="images/resume.pdf" class="btn btn-outline" download><i class="fas fa-file-pdf"></i><span>Download CV</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== EDUCATION SECTION ===================== -->
-    <section class="section education" id="education">
+    <!-- ====== RESUME ====== -->
+    <section class="section resume" id="resume">
         <div class="container">
-            <div class="section__header" data-aos="fade-up">
-                <span class="section__subtitle">
-                    <i class="fas fa-minus"></i> Academic Background
-                </span>
-                <h2 class="section__title">Education</h2>
-                <p class="section__desc">My academic journey and qualifications</p>
+            <div class="section-head" data-aos="fade-up">
+                <div class="section-badge">Resume</div>
+                <h2 class="section-title">Education & <span class="gtext">Experience</span></h2>
+                <p class="section-sub">My academic and professional journey</p>
             </div>
 
-            <div class="education__timeline">
-                <div class="timeline__line"></div>
-
-                <div class="timeline__item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline__dot">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline__card">
-                        <div class="timeline__card-header">
-                            <div class="timeline__badge">Bachelor's Degree</div>
-                            <div class="timeline__year">
-                                <i class="fas fa-calendar-alt"></i>
-                                Completed
+            <div class="resume-grid">
+                <div class="resume-col" data-aos="fade-right">
+                    <div class="rcol-head"><div class="rcol-icon"><i class="fas fa-graduation-cap"></i></div><h3>Education</h3></div>
+                    <div class="tl">
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-card">
+                                <span class="tl-badge">Bachelor's Degree</span>
+                                <h4>B.E. in Civil Engineering</h4>
+                                <div class="tl-meta"><span><i class="fas fa-university"></i> Mid-West University</span><span><i class="fas fa-calendar"></i> Completed</span></div>
+                                <p>Structural analysis, geotechnical engineering, hydraulics, transportation, construction management, surveying.</p>
+                                <div class="tl-tags"><span>Structural</span><span>Geotech</span><span>Hydraulics</span><span>Surveying</span><span>Management</span></div>
                             </div>
                         </div>
-                        <h3 class="timeline__title">
-                            Bachelor of Engineering in Civil Engineering (B.E. Civil)
-                        </h3>
-                        <div class="timeline__institution">
-                            <i class="fas fa-university"></i>
-                            <span>Mid-West University, Nepal</span>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-card">
+                                <span class="tl-badge o">+2 Science</span>
+                                <h4>Higher Secondary (PCM)</h4>
+                                <div class="tl-meta"><span><i class="fas fa-school"></i> Nepal</span></div>
+                                <p>Physics, Chemistry, Mathematics — strong foundation for engineering.</p>
+                            </div>
                         </div>
-                        <p class="timeline__description">
-                            Comprehensive study of civil engineering disciplines including structural 
-                            analysis & design, geotechnical engineering, hydraulics & hydrology, 
-                            transportation engineering, construction management, surveying & leveling, 
-                            environmental engineering, and concrete technology.
-                        </p>
-                        <div class="timeline__subjects">
-                            <span><i class="fas fa-check"></i> Structural Analysis & Design</span>
-                            <span><i class="fas fa-check"></i> Geotechnical Engineering</span>
-                            <span><i class="fas fa-check"></i> Hydraulics & Hydrology</span>
-                            <span><i class="fas fa-check"></i> Transportation Engineering</span>
-                            <span><i class="fas fa-check"></i> Construction Management</span>
-                            <span><i class="fas fa-check"></i> Surveying & Leveling</span>
-                            <span><i class="fas fa-check"></i> Environmental Engineering</span>
-                            <span><i class="fas fa-check"></i> Concrete Technology</span>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-card">
+                                <span class="tl-badge g">SLC/SEE</span>
+                                <h4>Secondary Education</h4>
+                                <div class="tl-meta"><span><i class="fas fa-school"></i> Nepal</span></div>
+                                <p>Completed with excellent academic performance.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline__item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline__dot">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="timeline__card">
-                        <div class="timeline__card-header">
-                            <div class="timeline__badge orange">Higher Secondary (+2)</div>
-                            <div class="timeline__year">
-                                <i class="fas fa-calendar-alt"></i>
-                                Completed
+                <div class="resume-col" data-aos="fade-left">
+                    <div class="rcol-head"><div class="rcol-icon o"><i class="fas fa-briefcase"></i></div><h3>Experience</h3></div>
+                    <div class="tl">
+                        <div class="tl-item">
+                            <div class="tl-dot o"></div>
+                            <div class="tl-card">
+                                <span class="tl-badge">Project Work</span>
+                                <h4>Site Engineer — Hotel Construction</h4>
+                                <div class="tl-meta"><span><i class="fas fa-hotel"></i> Nepal</span><span><i class="fas fa-clock"></i> Project Duration</span></div>
+                                <p>Multi-story hotel construction from foundation to finishing.</p>
+                                <ul class="tl-list">
+                                    <li>Supervised RCC structural works & quality control</li>
+                                    <li>Managed material procurement & cost optimization</li>
+                                    <li>Coordinated with architects & contractors</li>
+                                    <li>Ensured Nepal Building Code compliance</li>
+                                    <li>Prepared progress reports & documentation</li>
+                                </ul>
+                                <div class="tl-tags"><span>RCC</span><span>Quality Control</span><span>Management</span></div>
                             </div>
                         </div>
-                        <h3 class="timeline__title">
-                            Higher Secondary Education – Science Stream
-                        </h3>
-                        <div class="timeline__institution">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nepal</span>
-                        </div>
-                        <p class="timeline__description">
-                            Completed +2 Science with specialization in Physics, Chemistry, and 
-                            Mathematics. Built a strong analytical and mathematical foundation 
-                            essential for engineering studies.
-                        </p>
-                        <div class="timeline__subjects">
-                            <span><i class="fas fa-check"></i> Physics</span>
-                            <span><i class="fas fa-check"></i> Chemistry</span>
-                            <span><i class="fas fa-check"></i> Mathematics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline__item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline__dot">
-                        <i class="fas fa-book-reader"></i>
-                    </div>
-                    <div class="timeline__card">
-                        <div class="timeline__card-header">
-                            <div class="timeline__badge green">Secondary (SEE/SLC)</div>
-                            <div class="timeline__year">
-                                <i class="fas fa-calendar-alt"></i>
-                                Completed
+                        <div class="tl-item">
+                            <div class="tl-dot o"></div>
+                            <div class="tl-card">
+                                <span class="tl-badge o">Internship — 4 Months</span>
+                                <h4>Intern Engineer — Road Division Surkhet</h4>
+                                <div class="tl-meta"><span><i class="fas fa-landmark"></i> DoR, Surkhet</span><span><i class="fas fa-clock"></i> 4 Months</span></div>
+                                <p>Government road construction & maintenance projects.</p>
+                                <ul class="tl-list">
+                                    <li>Surveying with Total Station & Auto Level</li>
+                                    <li>BOQ, quantity estimation & cost analysis</li>
+                                    <li>Road design review & alignment planning</li>
+                                    <li>Government tender & contract processes</li>
+                                    <li>Field reports & measurement documentation</li>
+                                </ul>
+                                <div class="tl-tags"><span>Surveying</span><span>BOQ</span><span>Road Construction</span></div>
                             </div>
-                        </div>
-                        <h3 class="timeline__title">
-                            School Leaving Certificate (SLC / SEE)
-                        </h3>
-                        <div class="timeline__institution">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nepal</span>
-                        </div>
-                        <p class="timeline__description">
-                            Successfully completed the Secondary Education Examination (SEE) with 
-                            excellent academic performance, laying a solid groundwork for further studies.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== EXPERIENCE SECTION ===================== -->
-    <section class="section experience" id="experience">
-        <div class="container">
-            <div class="section__header" data-aos="fade-up">
-                <span class="section__subtitle">
-                    <i class="fas fa-minus"></i> Professional Journey
-                </span>
-                <h2 class="section__title">Work Experience</h2>
-                <p class="section__desc">Hands-on experience in construction and infrastructure</p>
-            </div>
-
-            <div class="experience__grid">
-                <!-- Experience Card 1 -->
-                <div class="exp__card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="exp__card-accent"></div>
-                    <div class="exp__card-content">
-                        <div class="exp__header">
-                            <div class="exp__icon-wrap">
-                                <div class="exp__icon">
-                                    <i class="fas fa-hotel"></i>
-                                </div>
-                            </div>
-                            <div class="exp__meta">
-                                <span class="exp__type">Full Project</span>
-                                <span class="exp__duration">
-                                    <i class="fas fa-clock"></i> Project Duration
-                                </span>
-                            </div>
-                        </div>
-
-                        <h3 class="exp__title">Site Engineer</h3>
-                        <h4 class="exp__company">
-                            <i class="fas fa-building"></i>
-                            Hotel Construction Project
-                        </h4>
-                        <p class="exp__location">
-                            <i class="fas fa-map-marker-alt"></i> Nepal
-                        </p>
-
-                        <div class="exp__responsibilities">
-                            <h5>Key Responsibilities & Achievements:</h5>
-                            <div class="exp__list">
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Led on-site supervision of multi-story hotel construction from foundation to finishing</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Reviewed and interpreted structural drawings and architectural plans</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Ensured quality control for concrete mixing, reinforcement placement, and formwork</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Monitored compliance with Nepal Building Code and safety standards</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Managed material procurement, inventory tracking, and cost optimization</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Coordinated with contractors, architects, and project stakeholders</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet"></div>
-                                    <p>Prepared daily progress reports and maintained project documentation</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="exp__tags">
-                            <span>Structural Supervision</span>
-                            <span>Quality Control</span>
-                            <span>Project Management</span>
-                            <span>RCC Works</span>
-                            <span>Documentation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience Card 2 -->
-                <div class="exp__card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="exp__card-accent orange"></div>
-                    <div class="exp__card-content">
-                        <div class="exp__header">
-                            <div class="exp__icon-wrap">
-                                <div class="exp__icon orange">
-                                    <i class="fas fa-road"></i>
-                                </div>
-                            </div>
-                            <div class="exp__meta">
-                                <span class="exp__type internship">Internship</span>
-                                <span class="exp__duration">
-                                    <i class="fas fa-clock"></i> 4 Months
-                                </span>
-                            </div>
-                        </div>
-
-                        <h3 class="exp__title">Intern Engineer</h3>
-                        <h4 class="exp__company">
-                            <i class="fas fa-landmark"></i>
-                            Road Division Surkhet, DoR
-                        </h4>
-                        <p class="exp__location">
-                            <i class="fas fa-map-marker-alt"></i> Surkhet, Karnali Province, Nepal
-                        </p>
-
-                        <div class="exp__responsibilities">
-                            <h5>Key Responsibilities & Learning:</h5>
-                            <div class="exp__list">
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Assisted in supervision of road construction and maintenance projects</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Conducted field surveys using Total Station, Auto Level, and GPS instruments</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Prepared quantity estimations, BOQ, and cost analysis for road projects</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Reviewed road geometric design, alignment plans, and cross-sections</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Gained exposure to government tender processes and contract management</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Studied road safety standards, drainage design, and pavement engineering</p>
-                                </div>
-                                <div class="exp__list-item">
-                                    <div class="list-bullet orange"></div>
-                                    <p>Prepared field reports, measurement books, and progress documentation</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="exp__tags">
-                            <span>Road Construction</span>
-                            <span>Surveying</span>
-                            <span>Estimation & BOQ</span>
-                            <span>Government Projects</span>
-                            <span>Field Reports</span>
                         </div>
                     </div>
                 </div>
@@ -659,677 +424,285 @@
         </div>
     </section>
 
-    <!-- ===================== SKILLS SECTION ===================== -->
+    <!-- ====== SKILLS ====== -->
     <section class="section skills" id="skills">
         <div class="container">
-            <div class="section__header" data-aos="fade-up">
-                <span class="section__subtitle">
-                    <i class="fas fa-minus"></i> Competencies
-                </span>
-                <h2 class="section__title">Skills & Expertise</h2>
-                <p class="section__desc">Technical proficiency and professional capabilities</p>
+            <div class="section-head" data-aos="fade-up">
+                <div class="section-badge">Skills</div>
+                <h2 class="section-title">My <span class="gtext">Expertise</span></h2>
+                <p class="section-sub">Technical proficiency and capabilities</p>
             </div>
 
-            <div class="skills__container">
-                <!-- Technical Skills -->
-                <div class="skills__group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skills__group-header">
-                        <div class="skills__group-icon">
-                            <i class="fas fa-hard-hat"></i>
-                        </div>
-                        <h3>Technical Engineering Skills</h3>
-                    </div>
-                    <div class="skills__bars">
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <span class="skill__name">Structural Analysis & Design</span>
-                                <span class="skill__percent">85%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div class="skill__progress" data-width="85" style="--bar-color: #2563eb;"></div>
-                            </div>
-                        </div>
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <span class="skill__name">Construction Site Management</span>
-                                <span class="skill__percent">80%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div class="skill__progress" data-width="80" style="--bar-color: #7c3aed;"></div>
-                            </div>
-                        </div>
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <span class="skill__name">Quantity Estimation & BOQ</span>
-                                <span class="skill__percent">88%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div class="skill__progress" data-width="88" style="--bar-color: #059669;"></div>
-                            </div>
-                        </div>
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <span class="skill__name">Surveying & Leveling</span>
-                                <span class="skill__percent">82%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div class="skill__progress" data-width="82" style="--bar-color: #d97706;"></div>
-                            </div>
-                        </div>
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <span class="skill__name">Quality Control & Assurance</span>
-                                <span class="skill__percent">78%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div class="skill__progress" data-width="78" style="--bar-color: #dc2626;"></div>
-                            </div>
-                        </div>
-                        <div class="skill__item">
-                            <div class="skill__header">
-                                <span class="skill__name">Road & Transportation Engineering</span>
-                                <span class="skill__percent">76%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div class="skill__progress" data-width="76" style="--bar-color: #0891b2;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="skill-tabs" data-aos="fade-up">
+                <button class="stab active" data-tab="tech"><i class="fas fa-hard-hat"></i> Technical</button>
+                <button class="stab" data-tab="soft"><i class="fas fa-laptop-code"></i> Software</button>
+                <button class="stab" data-tab="pro"><i class="fas fa-users"></i> Professional</button>
+            </div>
 
-                <!-- Software Skills -->
-                <div class="skills__group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skills__group-header">
-                        <div class="skills__group-icon orange">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Software & Digital Tools</h3>
-                    </div>
-                    <div class="software__grid">
-                        <div class="software__card">
-                            <div class="software__icon-wrap">
-                                <i class="fas fa-drafting-compass"></i>
-                            </div>
-                            <h4>AutoCAD</h4>
-                            <div class="software__level">
-                                <div class="level-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot"></span>
-                                </div>
-                                <span>Advanced</span>
-                            </div>
-                        </div>
-                        <div class="software__card">
-                            <div class="software__icon-wrap">
-                                <i class="fas fa-calculator"></i>
-                            </div>
-                            <h4>SAP2000</h4>
-                            <div class="software__level">
-                                <div class="level-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                </div>
-                                <span>Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="software__card">
-                            <div class="software__icon-wrap">
-                                <i class="fas fa-cube"></i>
-                            </div>
-                            <h4>SketchUp</h4>
-                            <div class="software__level">
-                                <div class="level-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                </div>
-                                <span>Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="software__card">
-                            <div class="software__icon-wrap">
-                                <i class="fas fa-table"></i>
-                            </div>
-                            <h4>MS Excel</h4>
-                            <div class="software__level">
-                                <div class="level-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                </div>
-                                <span>Expert</span>
-                            </div>
-                        </div>
-                        <div class="software__card">
-                            <div class="software__icon-wrap">
-                                <i class="fas fa-file-word"></i>
-                            </div>
-                            <h4>MS Word</h4>
-                            <div class="software__level">
-                                <div class="level-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot"></span>
-                                </div>
-                                <span>Advanced</span>
-                            </div>
-                        </div>
-                        <div class="software__card">
-                            <div class="software__icon-wrap">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <h4>Google Earth</h4>
-                            <div class="software__level">
-                                <div class="level-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                </div>
-                                <span>Intermediate</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="skill-panel active" id="tab-tech" data-aos="fade-up">
+                <div class="skill-bars-grid">
+                    <div class="sbar"><div class="sbar-top"><i class="fas fa-building"></i><span>Structural Analysis</span><span class="sbar-pct">85%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div></div>
+                    <div class="sbar"><div class="sbar-top"><i class="fas fa-helmet-safety"></i><span>Construction Management</span><span class="sbar-pct">80%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="80"></div></div></div>
+                    <div class="sbar"><div class="sbar-top"><i class="fas fa-file-invoice-dollar"></i><span>Estimation & BOQ</span><span class="sbar-pct">88%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="88"></div></div></div>
+                    <div class="sbar"><div class="sbar-top"><i class="fas fa-ruler-combined"></i><span>Surveying & Leveling</span><span class="sbar-pct">82%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="82"></div></div></div>
+                    <div class="sbar"><div class="sbar-top"><i class="fas fa-shield-alt"></i><span>Quality Control</span><span class="sbar-pct">78%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="78"></div></div></div>
+                    <div class="sbar"><div class="sbar-top"><i class="fas fa-road"></i><span>Transportation Engg</span><span class="sbar-pct">76%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="76"></div></div></div>
                 </div>
+            </div>
 
-                <!-- Soft Skills -->
-                <div class="skills__group full-width" data-aos="fade-up" data-aos-delay="300">
-                    <div class="skills__group-header">
-                        <div class="skills__group-icon green">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Professional & Soft Skills</h3>
-                    </div>
-                    <div class="soft-skills__grid">
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-users-cog"></i></div>
-                            <span>Team Leadership</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-comments"></i></div>
-                            <span>Communication</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-puzzle-piece"></i></div>
-                            <span>Problem Solving</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-tasks"></i></div>
-                            <span>Project Planning</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-clock"></i></div>
-                            <span>Time Management</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-lightbulb"></i></div>
-                            <span>Critical Thinking</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-handshake"></i></div>
-                            <span>Client Relations</span>
-                        </div>
-                        <div class="soft-skill__card">
-                            <div class="soft-skill__icon"><i class="fas fa-eye"></i></div>
-                            <span>Attention to Detail</span>
-                        </div>
-                    </div>
+            <div class="skill-panel" id="tab-soft">
+                <div class="sw-grid">
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-drafting-compass"></i></div><h4>AutoCAD</h4><div class="sw-bar"><div style="width:90%"></div></div><span>Advanced</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-calculator"></i></div><h4>SAP2000</h4><div class="sw-bar"><div style="width:65%"></div></div><span>Intermediate</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-cube"></i></div><h4>SketchUp</h4><div class="sw-bar"><div style="width:70%"></div></div><span>Intermediate</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-table"></i></div><h4>MS Excel</h4><div class="sw-bar"><div style="width:95%"></div></div><span>Expert</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-file-word"></i></div><h4>MS Word</h4><div class="sw-bar"><div style="width:85%"></div></div><span>Advanced</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-globe"></i></div><h4>Google Earth</h4><div class="sw-bar"><div style="width:70%"></div></div><span>Intermediate</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-project-diagram"></i></div><h4>MS Project</h4><div class="sw-bar"><div style="width:60%"></div></div><span>Intermediate</span></div>
+                    <div class="sw-card"><div class="sw-icon"><i class="fas fa-chart-bar"></i></div><h4>ETABS</h4><div class="sw-bar"><div style="width:55%"></div></div><span>Basic</span></div>
+                </div>
+            </div>
+
+            <div class="skill-panel" id="tab-pro">
+                <div class="pro-grid">
+                    <div class="pro-card"><i class="fas fa-users-cog"></i><span>Team Leadership</span></div>
+                    <div class="pro-card"><i class="fas fa-comments"></i><span>Communication</span></div>
+                    <div class="pro-card"><i class="fas fa-puzzle-piece"></i><span>Problem Solving</span></div>
+                    <div class="pro-card"><i class="fas fa-tasks"></i><span>Project Planning</span></div>
+                    <div class="pro-card"><i class="fas fa-clock"></i><span>Time Management</span></div>
+                    <div class="pro-card"><i class="fas fa-lightbulb"></i><span>Critical Thinking</span></div>
+                    <div class="pro-card"><i class="fas fa-handshake"></i><span>Client Relations</span></div>
+                    <div class="pro-card"><i class="fas fa-eye"></i><span>Attention to Detail</span></div>
+                    <div class="pro-card"><i class="fas fa-sync-alt"></i><span>Adaptability</span></div>
+                    <div class="pro-card"><i class="fas fa-chart-line"></i><span>Decision Making</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== PROJECTS SECTION ===================== -->
+    <!-- ====== PROJECTS ====== -->
     <section class="section projects" id="projects">
         <div class="container">
-            <div class="section__header" data-aos="fade-up">
-                <span class="section__subtitle">
-                    <i class="fas fa-minus"></i> Portfolio
-                </span>
-                <h2 class="section__title">Featured Projects</h2>
-                <p class="section__desc">Showcasing my professional work and contributions</p>
+            <div class="section-head" data-aos="fade-up">
+                <div class="section-badge">Portfolio</div>
+                <h2 class="section-title">Featured <span class="gtext">Projects</span></h2>
+                <p class="section-sub">Professional work and contributions</p>
             </div>
-
-            <div class="projects__grid">
-                <!-- Project 1 -->
-                <div class="project__card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project__image">
-                        <div class="project__img-bg blue">
-                            <i class="fas fa-hotel"></i>
-                            <span>Hotel Construction</span>
-                        </div>
-                        <div class="project__overlay">
-                            <span class="project__number">01</span>
-                        </div>
-                    </div>
-                    <div class="project__content">
-                        <div class="project__category">
-                            <i class="fas fa-building"></i> Construction Project
-                        </div>
-                        <h3 class="project__title">Multi-Story Hotel Building</h3>
-                        <p class="project__desc">
-                            Complete supervision of a multi-story hotel construction project 
-                            from foundation to finishing. Managed RCC structural works, masonry, 
-                            plumbing, and electrical coordination with strict quality control.
-                        </p>
-                        <div class="project__details">
-                            <div class="project__detail">
-                                <i class="fas fa-layer-group"></i>
-                                <span>Multi-Story RCC</span>
-                            </div>
-                            <div class="project__detail">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Quality Assured</span>
-                            </div>
-                            <div class="project__detail">
-                                <i class="fas fa-users"></i>
-                                <span>Team Coordination</span>
-                            </div>
-                        </div>
-                        <div class="project__techs">
-                            <span>RCC Structure</span>
-                            <span>NBC Compliance</span>
-                            <span>Site Management</span>
-                            <span>Quality Control</span>
-                        </div>
+            <div class="proj-grid">
+                <div class="proj-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="proj-img"><div class="proj-bg blue"><i class="fas fa-hotel"></i></div><span class="proj-num">01</span></div>
+                    <div class="proj-body">
+                        <span class="proj-cat"><i class="fas fa-building"></i> Construction</span>
+                        <h3>Multi-Story Hotel Construction</h3>
+                        <p>Complete site supervision from foundation to finishing with quality control.</p>
+                        <div class="proj-tags"><span>RCC</span><span>NBC</span><span>Management</span></div>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="project__card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project__image">
-                        <div class="project__img-bg green">
-                            <i class="fas fa-road"></i>
-                            <span>Road Infrastructure</span>
-                        </div>
-                        <div class="project__overlay">
-                            <span class="project__number">02</span>
-                        </div>
-                    </div>
-                    <div class="project__content">
-                        <div class="project__category">
-                            <i class="fas fa-route"></i> Infrastructure / Internship
-                        </div>
-                        <h3 class="project__title">Road Division Surkhet – Road Projects</h3>
-                        <p class="project__desc">
-                            Participated in multiple road construction and maintenance projects 
-                            during 4-month internship at Road Division Surkhet. Involved in 
-                            surveying, estimation, and project supervision activities.
-                        </p>
-                        <div class="project__details">
-                            <div class="project__detail">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>Surveying Works</span>
-                            </div>
-                            <div class="project__detail">
-                                <i class="fas fa-file-invoice-dollar"></i>
-                                <span>Estimation & BOQ</span>
-                            </div>
-                            <div class="project__detail">
-                                <i class="fas fa-landmark"></i>
-                                <span>Govt. Project</span>
-                            </div>
-                        </div>
-                        <div class="project__techs">
-                            <span>Road Construction</span>
-                            <span>Total Station Survey</span>
-                            <span>BOQ Preparation</span>
-                            <span>Field Reports</span>
-                        </div>
+                <div class="proj-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="proj-img"><div class="proj-bg green"><i class="fas fa-road"></i></div><span class="proj-num">02</span></div>
+                    <div class="proj-body">
+                        <span class="proj-cat"><i class="fas fa-route"></i> Infrastructure</span>
+                        <h3>Road Division Surkhet Projects</h3>
+                        <p>Road construction, surveying, estimation during 4-month internship.</p>
+                        <div class="proj-tags"><span>Roads</span><span>Survey</span><span>BOQ</span></div>
                     </div>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="project__card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project__image">
-                        <div class="project__img-bg purple">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Academic Project</span>
-                        </div>
-                        <div class="project__overlay">
-                            <span class="project__number">03</span>
-                        </div>
-                    </div>
-                    <div class="project__content">
-                        <div class="project__category">
-                            <i class="fas fa-graduation-cap"></i> Academic
-                        </div>
-                        <h3 class="project__title">B.E. Final Year Project</h3>
-                        <p class="project__desc">
-                            Comprehensive final year project at Mid-West University involving 
-                            detailed structural design, analysis, cost estimation, and complete 
-                            project documentation following engineering standards.
-                        </p>
-                        <div class="project__details">
-                            <div class="project__detail">
-                                <i class="fas fa-compass-drafting"></i>
-                                <span>Design & Analysis</span>
-                            </div>
-                            <div class="project__detail">
-                                <i class="fas fa-book"></i>
-                                <span>Research Based</span>
-                            </div>
-                            <div class="project__detail">
-                                <i class="fas fa-award"></i>
-                                <span>MWU Project</span>
-                            </div>
-                        </div>
-                        <div class="project__techs">
-                            <span>Structural Design</span>
-                            <span>Cost Estimation</span>
-                            <span>AutoCAD Drawing</span>
-                            <span>Project Report</span>
-                        </div>
+                <div class="proj-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="proj-img"><div class="proj-bg purple"><i class="fas fa-file-alt"></i></div><span class="proj-num">03</span></div>
+                    <div class="proj-body">
+                        <span class="proj-cat"><i class="fas fa-graduation-cap"></i> Academic</span>
+                        <h3>B.E. Final Year Project</h3>
+                        <p>Structural design, analysis, cost estimation at Mid-West University.</p>
+                        <div class="proj-tags"><span>Design</span><span>AutoCAD</span><span>Analysis</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== STATS / COUNTER SECTION ===================== -->
-    <section class="counter" id="counter">
-        <div class="counter__bg"></div>
+    <!-- ====== GALLERY ====== -->
+    <section class="section gallery" id="gallery">
         <div class="container">
-            <div class="counter__grid">
-                <div class="counter__item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="counter__icon"><i class="fas fa-project-diagram"></i></div>
-                    <div class="counter__number" data-target="2">0</div>
-                    <div class="counter__label">Projects Completed</div>
-                </div>
-                <div class="counter__item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="counter__icon"><i class="fas fa-calendar-check"></i></div>
-                    <div class="counter__number" data-target="4">0</div>
-                    <div class="counter__label">Months Internship</div>
-                </div>
-                <div class="counter__item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="counter__icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="counter__number" data-target="1">0</div>
-                    <div class="counter__label">Engineering Degree</div>
-                </div>
-                <div class="counter__item" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="counter__icon"><i class="fas fa-mug-hot"></i></div>
-                    <div class="counter__number" data-target="999">0</div>
-                    <div class="counter__label">Cups of Tea/Coffee</div>
-                </div>
+            <div class="section-head" data-aos="fade-up">
+                <div class="section-badge">Gallery</div>
+                <h2 class="section-title">Photo <span class="gtext">Gallery</span></h2>
+                <p class="section-sub">Moments from my engineering journey</p>
+            </div>
+            <div class="gallery-grid" data-aos="fade-up">
+                <div class="gal-item"><div class="gal-placeholder"><i class="fas fa-hard-hat"></i><span>Construction Site</span></div></div>
+                <div class="gal-item"><div class="gal-placeholder"><i class="fas fa-road"></i><span>Road Survey</span></div></div>
+                <div class="gal-item"><div class="gal-placeholder"><i class="fas fa-drafting-compass"></i><span>Design Work</span></div></div>
+                <div class="gal-item"><div class="gal-placeholder"><i class="fas fa-users"></i><span>Team Work</span></div></div>
+                <div class="gal-item"><div class="gal-placeholder"><i class="fas fa-graduation-cap"></i><span>Graduation</span></div></div>
+                <div class="gal-item"><div class="gal-placeholder"><i class="fas fa-mountain"></i><span>Site Visit</span></div></div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== TESTIMONIAL / QUOTE SECTION ===================== -->
-    <section class="section quote-section">
+    <!-- ====== COUNTER ====== -->
+    <section class="counter-sec" id="counterSec">
+        <div class="counter-bg"></div>
         <div class="container">
-            <div class="quote__card" data-aos="fade-up">
-                <div class="quote__icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote class="quote__text">
-                    "Engineering is not only about constructing structures — it is about building dreams, 
-                    connecting communities, and shaping a sustainable future for generations to come."
-                </blockquote>
-                <div class="quote__author">
-                    <div class="quote__author-avatar">AP</div>
-                    <div class="quote__author-info">
-                        <strong>Er. Arun Panthi</strong>
-                        <span>Civil Engineer</span>
-                    </div>
-                </div>
+            <div class="counter-grid">
+                <div class="cnt" data-aos="zoom-in"><div class="cnt-icon"><i class="fas fa-project-diagram"></i></div><div class="cnt-num" data-target="2">0</div><div class="cnt-label">Projects</div></div>
+                <div class="cnt" data-aos="zoom-in" data-aos-delay="100"><div class="cnt-icon"><i class="fas fa-calendar-check"></i></div><div class="cnt-num" data-target="4">0</div><div class="cnt-label">Months Intern</div></div>
+                <div class="cnt" data-aos="zoom-in" data-aos-delay="200"><div class="cnt-icon"><i class="fas fa-graduation-cap"></i></div><div class="cnt-num" data-target="1">0</div><div class="cnt-label">Degree</div></div>
+                <div class="cnt" data-aos="zoom-in" data-aos-delay="300"><div class="cnt-icon"><i class="fas fa-mug-hot"></i></div><div class="cnt-num" data-target="999">0</div><div class="cnt-label">Cups of Tea</div></div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== CONTACT SECTION ===================== -->
+    <!-- ====== QUOTE ====== -->
+    <section class="section quote-sec">
+        <div class="container">
+            <div class="quote-card" data-aos="fade-up">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <blockquote>"Engineering is not merely about erecting structures — it's about building dreams, connecting communities, and shaping a sustainable future."</blockquote>
+                <div class="quote-author"><div class="qa-avatar">AP</div><div><strong>Er. Arun Panthi</strong><span>Civil Engineer</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
     <section class="section contact" id="contact">
         <div class="container">
-            <div class="section__header" data-aos="fade-up">
-                <span class="section__subtitle">
-                    <i class="fas fa-minus"></i> Get In Touch
-                </span>
-                <h2 class="section__title">Contact Me</h2>
-                <p class="section__desc">Let's discuss your next project or opportunity</p>
+            <div class="section-head" data-aos="fade-up">
+                <div class="section-badge">Contact</div>
+                <h2 class="section-title">Let's <span class="gtext">Connect</span></h2>
+                <p class="section-sub">Have a project? Let's discuss!</p>
             </div>
 
-            <div class="contact__grid">
-                <div class="contact__info" data-aos="fade-right" data-aos-delay="100">
-                    <h3 class="contact__heading">
-                        Let's Build <span>Something Great</span> Together
-                    </h3>
-                    <p class="contact__text">
-                        Whether you need a civil engineer for your construction project, 
-                        want to discuss engineering solutions, or have a job opportunity — 
-                        I'd love to hear from you.
-                    </p>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get In Touch <span class="gtext">With Me</span></h3>
+                    <p>Whether you need engineering services or have opportunities — I'd love to hear from you!</p>
 
-                    <div class="contact__cards">
-                        <div class="contact__card">
-                            <div class="contact__card-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact__card-info">
-                                <h4>Location</h4>
-                                <p>Surkhet, Karnali Province, Nepal</p>
-                            </div>
-                        </div>
-                        <div class="contact__card">
-                            <div class="contact__card-icon orange">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact__card-info">
-                                <h4>Email</h4>
-                                <p>arunpanthi@email.com</p>
-                            </div>
-                        </div>
-                        <div class="contact__card">
-                            <div class="contact__card-icon green">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact__card-info">
+                    <div class="contact-cards">
+                        <a href="mailto:Er.arunpanthi@gmail.com" class="ccard">
+                            <div class="ccard-icon"><i class="fas fa-envelope"></i></div>
+                            <div><h4>Email</h4><p>Er.arunpanthi@gmail.com</p></div>
+                            <i class="fas fa-arrow-right ccard-arrow"></i>
+                        </a>
+                        <a href="#" class="ccard wa-contact-link">
+                            <div class="ccard-icon green"><i class="fab fa-whatsapp"></i></div>
+                            <div><h4>WhatsApp</h4><p>Chat directly with me</p></div>
+                            <i class="fas fa-arrow-right ccard-arrow"></i>
+                        </a>
+                        <div class="ccard">
+                            <div class="ccard-icon orange"><i class="fas fa-phone-alt"></i></div>
+                            <div>
                                 <h4>Phone</h4>
-                                <p>+977-XXXXXXXXXX</p>
+                                <div class="phone-mask-wrap">
+                                    <span class="phone-display" id="phoneDisplay">+977-98XXXXXX</span>
+                                    <button class="reveal-btn" id="revealBtn"><i class="fas fa-eye"></i> Show</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact__card">
-                            <div class="contact__card-icon purple">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="contact__card-info">
-                                <h4>WhatsApp</h4>
-                                <p>+977-XXXXXXXXXX</p>
-                            </div>
+                        <div class="ccard">
+                            <div class="ccard-icon purple"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h4>Location</h4><p>Surkhet, Karnali Province, Nepal</p></div>
                         </div>
                     </div>
 
-                    <div class="contact__socials">
-                        <h4>Connect on Social Media</h4>
-                        <div class="contact__social-icons">
-                            <a href="#" class="contact__social-link facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="contact__social-link linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="contact__social-link instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="contact__social-link twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
+                    <div class="contact-social">
+                        <h4>Social Media</h4>
+                        <div class="csocial-icons">
+                            <a href="https://www.facebook.com/arunpanthi" target="_blank" class="csoc fb"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/arunpanthi" target="_blank" class="csoc li"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/arunpanthi" target="_blank" class="csoc ig"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:Er.arunpanthi@gmail.com" class="csoc em"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="contact__form-wrapper" data-aos="fade-left" data-aos-delay="200">
-                    <div class="contact__form-card">
-                        <h3 class="form__title">Send Me a Message</h3>
-                        <p class="form__subtitle">Fill out the form below and I'll get back to you shortly.</p>
-
-                        <form class="contact__form" id="contactForm">
-                            <div class="form__row">
-                                <div class="form__group">
-                                    <div class="form__input-wrapper">
-                                        <i class="fas fa-user"></i>
-                                        <input type="text" id="name" name="name" placeholder=" " required>
-                                        <label for="name">Full Name</label>
-                                    </div>
-                                </div>
-                                <div class="form__group">
-                                    <div class="form__input-wrapper">
-                                        <i class="fas fa-envelope"></i>
-                                        <input type="email" id="email" name="email" placeholder=" " required>
-                                        <label for="email">Email Address</label>
-                                    </div>
-                                </div>
+                <div class="contact-form-side" data-aos="fade-left">
+                    <div class="form-card">
+                        <h3>Send a Message</h3>
+                        <p>I'll reply within 24 hours.</p>
+                        <form id="contactForm">
+                            <div class="frow">
+                                <div class="fgroup"><input type="text" id="fn" placeholder=" " required><label>Full Name</label></div>
+                                <div class="fgroup"><input type="email" id="fe" placeholder=" " required><label>Email</label></div>
                             </div>
-
-                            <div class="form__group">
-                                <div class="form__input-wrapper">
-                                    <i class="fas fa-phone"></i>
-                                    <input type="tel" id="phone" name="phone" placeholder=" ">
-                                    <label for="phone">Phone Number (Optional)</label>
-                                </div>
-                            </div>
-
-                            <div class="form__group">
-                                <div class="form__input-wrapper">
-                                    <i class="fas fa-tag"></i>
-                                    <input type="text" id="subject" name="subject" placeholder=" " required>
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-
-                            <div class="form__group">
-                                <div class="form__input-wrapper textarea">
-                                    <i class="fas fa-comment-dots"></i>
-                                    <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-                                    <label for="message">Your Message</label>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
-                                <span class="btn-text">Send Message</span>
-                                <span class="btn-loading" style="display:none;">
-                                    <i class="fas fa-spinner fa-spin"></i> Sending...
-                                </span>
-                                <i class="fas fa-paper-plane btn-icon"></i>
+                            <div class="fgroup"><input type="text" id="fs" placeholder=" " required><label>Subject</label></div>
+                            <div class="fgroup"><textarea id="fm" rows="5" placeholder=" " required></textarea><label>Message</label></div>
+                            <button type="submit" class="btn btn-primary btn-full" id="formBtn">
+                                <span class="fb-default"><i class="fas fa-paper-plane"></i> Send Message</span>
+                                <span class="fb-loading"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                                <span class="fb-success"><i class="fas fa-check"></i> Sent!</span>
                             </button>
                         </form>
-
-                        <div class="form__success" id="formSuccess" style="display:none;">
-                            <i class="fas fa-check-circle"></i>
-                            <h4>Message Sent Successfully!</h4>
-                            <p>Thank you for reaching out. I'll get back to you soon.</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== MAP SECTION ===================== -->
-    <section class="map-section">
-        <div class="map__overlay">
-            <div class="map__info">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Based in Surkhet, Nepal</h3>
-                <p>Open for opportunities across Nepal</p>
-            </div>
-        </div>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31397712412!2d81.58!3d28.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998134c0d37cf65%3A0x6e11b5e6f29a5b8c!2sSurkhet!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
-            width="100%" 
-            height="350" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"
-            title="Location Map">
-        </iframe>
+    <!-- ====== MAP ====== -->
+    <section class="map-sec">
+        <div class="map-overlay"><div class="map-info"><i class="fas fa-map-marker-alt"></i><h3>Surkhet, Nepal</h3><p>Open for opportunities across Nepal</p></div></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31!2d81.58!3d28.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998134c0d37cf65%3A0x6e11b5e6f29a5b8c!2sSurkhet!5e0!3m2!1sen!2snp!4v1700000000!5m2!1sen!2snp" width="100%" height="300" style="border:0" loading="lazy" title="Map"></iframe>
     </section>
 
-    <!-- ===================== FOOTER ===================== -->
+    <!-- ====== FOOTER ====== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__grid">
-                <div class="footer__about">
-                    <div class="footer__logo">
-                        <div class="logo-icon">AP</div>
-                        <div class="logo-text">
-                            <span class="logo-name">Arun Panthi</span>
-                            <span class="logo-title">Civil Engineer</span>
-                        </div>
-                    </div>
-                    <p class="footer__desc">
-                        Building sustainable infrastructure and contributing to Nepal's 
-                        development through quality engineering practices and innovative solutions.
-                    </p>
-                    <div class="footer__socials">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo"><div class="logo-icon"><span>AP</span></div><div class="logo-text"><span class="logo-name">Arun Panthi</span><span class="logo-role">Civil Engineer</span></div></div>
+                    <p>Building sustainable infrastructure for Nepal's future.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/arunpanthi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/arunpanthi" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:Er.arunpanthi@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-
-                <div class="footer__links-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
-                        <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
-                        <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__links-col">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
-                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        <li><a href="images/resume.pdf"><i class="fas fa-chevron-right"></i> Download CV</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__contact">
-                    <h4>Contact Info</h4>
-                    <div class="footer__contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Surkhet, Nepal</span>
-                    </div>
-                    <div class="footer__contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Er.arunpanthi@gmail.com</span>
-                    </div>
-                    <div class="footer__contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+977-XXXXXXXXXX</span>
-                    </div>
-                </div>
+                <div class="footer-col"><h4>Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#resume">Resume</a></li><li><a href="#skills">Skills</a></li></ul></div>
+                <div class="footer-col"><h4>More</h4><ul><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li><li><a href="images/resume.pdf" download>Download CV</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Surkhet, Nepal</p><p><i class="fas fa-envelope"></i> Er.arunpanthi@gmail.com</p></div>
             </div>
-
-            <div class="footer__bottom">
-                <p>&copy; 26 Er. Arun Panthi. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> in Nepal</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; <span id="yr">2024</span> Er. Arun Panthi. All Rights Reserved. | Made with <i class="fas fa-heart hb"></i> in Nepal</p></div>
         </div>
     </footer>
 
-    <!-- ===================== BACK TO TOP ===================== -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <!-- ====== WHATSAPP FLOATING ====== -->
+    <div class="wa-float" id="waFloat">
+        <div class="wa-popup" id="waPopup">
+            <div class="wa-popup-head">
+                <div class="wa-popup-avatar">AP</div>
+                <div><strong>Er. Arun Panthi</strong><span>Typically replies instantly</span></div>
+                <button class="wa-popup-close" id="waPopupClose">&times;</button>
+            </div>
+            <div class="wa-popup-body">
+                <div class="wa-msg">
+                    <p>👋 Namaste! How can I help you? Feel free to ask about engineering services or opportunities.</p>
+                    <span>Just now</span>
+                </div>
+            </div>
+            <a href="#" class="wa-popup-btn wa-popup-link" id="waPopupBtn">
+                <i class="fab fa-whatsapp"></i> Start Chat
+            </a>
+        </div>
+        <button class="wa-fab" id="waFab" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="wa-fab-pulse"></span>
+            <span class="wa-fab-badge">1</span>
+        </button>
+    </div>
+
+    <!-- ====== EMAIL FLOAT ====== -->
+    <a href="mailto:Er.arunpanthi@gmail.com" class="email-fab" id="emailFab" aria-label="Email"><i class="fas fa-envelope"></i></a>
+
+    <!-- ====== BACK TO TOP ====== -->
+    <button class="btt" id="btt" aria-label="Top">
+        <i class="fas fa-chevron-up"></i>
+        <svg class="btt-ring" viewBox="0 0 46 46"><circle cx="23" cy="23" r="20" id="bttCircle"></circle></svg>
     </button>
 
-    <!-- ===================== SCRIPTS ===================== -->
+    <!-- ====== TOAST CONTAINER ====== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ====== SCRIPTS ====== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
